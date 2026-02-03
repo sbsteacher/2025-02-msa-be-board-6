@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: board6
+    datasource: # ?????? ????
+        url: jdbc:mysql://localhost:3306/board
+        username: root
+        password: green502
+
+mybatis: # Mybatis ??
+    mapper-locations: mappers/**/*.xml # xml ?? ??
