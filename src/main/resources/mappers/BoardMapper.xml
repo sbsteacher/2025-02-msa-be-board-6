@@ -11,6 +11,10 @@
     <select id="findAll">
         SELECT id, title, created_at AS createdAt
         FROM board
+        <if test=" searchText != null and searchText != '' ">
+            WHERE title LIKE '%${searchText}%'
+               OR contents LIKE '%${searchText}%'
+        </if>
         ORDER BY id DESC
     </select>
 
