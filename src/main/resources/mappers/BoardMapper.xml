@@ -18,4 +18,10 @@
         ORDER BY id DESC
     </select>
 
+    <select id="findById">
+        SELECT id, title, contents, created_at
+          FROM board
+         WHERE id = #{id}
+    </select>
+
 </mapper>

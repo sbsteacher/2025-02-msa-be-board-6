@@ -1,5 +1,6 @@
 package com.green.board6.application;
 
+import com.green.board6.application.model.BoardGetOneRes;
 import com.green.board6.application.model.BoardGetRes;
 import com.green.board6.application.model.BoardPostReq;
 import lombok.RequiredArgsConstructor;
@@ -29,5 +30,9 @@ public class BoardService {
 
     public List<BoardGetRes> findAll(String searchText){
         return boardMapper.findAll(searchText);
+    }
+
+    public BoardGetOneRes findById(int id) {
+        return boardMapper.findById(id);
     }
 }
