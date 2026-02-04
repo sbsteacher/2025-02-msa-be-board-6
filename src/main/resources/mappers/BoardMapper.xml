@@ -9,7 +9,7 @@
     </insert>
 
     <select id="findAll">
-        SELECT id, title, created_at AS createdAt
+        SELECT id, title, created_at
         FROM board
         <if test=" searchText != null and searchText != '' ">
             WHERE title LIKE '%${searchText}%'

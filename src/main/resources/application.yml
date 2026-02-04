@@ -1,10 +1,17 @@
 spring:
     application:
         name: board6
-    datasource: # ?????? ????
-        url: jdbc:mysql://localhost:3306/board
+    datasource:
+        url: jdbc:log4jdbc:mysql://localhost:3306/board
         username: root
         password: green502
+        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
 
-mybatis: # Mybatis ??
-    mapper-locations: mappers/**/*.xml # xml ?? ??
+logging:
+    level:
+        org.apache.ibatis: INFO
+
+mybatis:
+    configuration:
+        map-underscore-to-camel-case: true
+    mapper-locations: mappers/**/*.xml
